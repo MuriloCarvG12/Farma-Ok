@@ -5,13 +5,16 @@ import {Globalstyles} from '.././globalstyles'
 
 /**<AntDesign name="car" size={24} color="black" /> */
 
-export default function Card()
+export default function Card({name, type}:any)
 {
+    
     return(
     <View style={Globalstyles.Card_body}>
         <View style={Globalstyles.Card_view}>
-            <Ionicons name="person" size={32} color="#14453D" />
-            <Text style={Globalstyles.Card_text}> Rato </Text>
+            
+                    
+            <Ionicons name={type} size={32} color="#14453D" />
+            <Text style={Globalstyles.Card_text}> {name} </Text>
         </View>
         <View style={Globalstyles.Card_control}>
             <Text style={Globalstyles.Card_control_text}>Controle de Usuario</Text>

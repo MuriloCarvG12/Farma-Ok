@@ -219,7 +219,14 @@ export  const Globalstyles = StyleSheet.create({
     {
       fontSize: 18,
       fontWeight: '600',
-      
+    },
+    users_button:
+    {
+      width: 225,
+      height: 60,
+      justifyContent: 'center',
+      backgroundColor: '#e0f1ff',
+      marginBottom: 40,
     },
 
     
