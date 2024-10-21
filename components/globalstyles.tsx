@@ -228,8 +228,76 @@ export  const Globalstyles = StyleSheet.create({
       backgroundColor: '#e0f1ff',
       marginBottom: 40,
     },
-
+    /***Tela Cadastro Usuários */
+    user_register_page:
+    {
+      flex: 1,
+      alignItems: 'center',
+      justifyContent: 'space-evenly',
+      width: "100%",
+      height: "100%",
+    },
     
+    user_register_type:
+    {
+      marginTop: 40,
+      marginBottom: 30,
+    },
+    user_register_form:
+    {
+      padding: 10,
+      width: "85%",
+      height: "95%",
+      backgroundColor: 'rgba(254, 254, 255, 0.2)',
+      marginBottom: 40,
+      gap: 60,
+      borderStyle: 'solid',
+      borderColor: 'grey',
+      borderWidth: 1,
+      borderRadius: 30,
+    },
+    user_register_block:
+    {
+      
+    },
+    user_register_item:
+    {
+      
+      gap: 10,
+    },
+    user_register_input_title:
+    {
+      textAlign: 'left',
+      fontWeight: '600',
+      fontSize: 18,
+    },
+    user_register_input:
+    {
+      alignSelf: 'center',
+      backgroundColor: 'white',
+      width: "80%",
+      
+    },
+    user_register_login:
+    {
+      flexDirection: 'row',
+      justifyContent: 'center',
+    },
+    user_register_login_text:
+    {
+      fontSize: 20,
+      fontWeight: '700',
+      
+    },
+    form_button:
+    {
+      width: 200,
+      height: 50,
+      marginBottom: 20,
+      
+      backgroundColor: '#a0d1fa',
+      
+    },
 
 });
 
