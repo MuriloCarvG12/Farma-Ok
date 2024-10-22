@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { ImageBackground, Text, View, TextInput, TouchableOpacity, Alert  } from 'react-native';
+import { ImageBackground, Text, View, FlatList, Alert  } from 'react-native';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import AntDesign from '@expo/vector-icons/AntDesign';
 import {Globalstyles} from '../components/globalstyles'
@@ -14,7 +14,24 @@ export default function Listagem_produtos({navigation}:any)
 
     const [produtos, setProdutos] = useState([])
 
-    useEffect(() => {}, [])// lista os produtos
+    useEffect(
+        () => 
+            {
+                axios.get('https://2fe9-187-183-36-59.ngrok-free.app' + '/products')
+                .then((response) => 
+                    {
+                        const data = response.data
+                        setProdutos(data)
+                    } 
+                    )
+            .catch((error) =>
+                {
+                    Alert.alert('Houve um erro ao buscar os Produtos')
+                })
+            }, 
+        [])
+    
+    // lista os produtos
     return(
         <View style={Globalstyles.container}>
             <ImageBackground source={image} resizeMode="cover" style={Globalstyles.image}>
@@ -22,12 +39,28 @@ export default function Listagem_produtos({navigation}:any)
                     <View style={Globalstyles.list_products_header}>
                         <Text style={{fontSize: 20, color: 'white', fontWeight: '600'}}>Eu sou a Tela Listagem</Text>
                     </View>
-                    <Product_card 
-                    Name= {'ratao da agua'}
 
-                    description= {'droga'}
+                    <FlatList
+                    data={produtos}
+                    renderItem={({item}:any) => 
+                    <Product_card 
+                    Name={item.product_name} 
+                    image={item.image_url}
+                    description={item.description}
+                    Quantity={item.quantity}
+                    branch_name={item.branch_name}
+                    location={item.location}
+
+                    
+                    
+                    />}
+
+
+                    
                     />
+                    
                 </View>
+
             </ImageBackground>
         </View>
     )
