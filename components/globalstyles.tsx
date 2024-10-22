@@ -299,6 +299,48 @@ export  const Globalstyles = StyleSheet.create({
       
     },
 
+  /*** Tela de listagem de Produtos */
+  list_products_body:
+  {
+    height: "100%",
+    width: "100%",
+
+    alignItems: 'center',
+  },
+  list_products_header:
+  {
+    height: "10%",
+    width: "100%",
+    backgroundColor: '#3D7068',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 40,
+  },
+  Product_card_head:
+  {
+    backgroundColor: '#43C59E',
+    height: "10%",
+    alignItems: 'center',
+    padding: 6,
+    borderTopEndRadius: 15,
+    borderTopStartRadius: 15,
+  },
+  Product_card_body: 
+  {
+    backgroundColor: 'white',
+    width: 250,
+    height: 400,
+    borderRadius: 20,
+    borderWidth: 2,
+    borderColor: '#43C59E',
+    gap: 10,
+  },
+  Product_card_body_items:
+  {
+    paddingTop: 20,
+    gap: 20,
+    alignItems: 'center',
+  },
 });
 
 
