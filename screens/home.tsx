@@ -32,7 +32,7 @@ export default function Home({navigation}:any)
                         <Text style={Globalstyles.home_link}>Estoque</Text>  
                     </View>
                     
-                    <TouchableOpacity style={Globalstyles.home_button}>
+                    <TouchableOpacity style={Globalstyles.home_button} onPress={() =>navigation.navigate("ListarProdutos")}>
                         <Text style={Globalstyles.home_link}>Gerenciar</Text>
                     </TouchableOpacity>
                 </View>

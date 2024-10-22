@@ -26,7 +26,7 @@ export default function Login({navigation}:any) {
     function handle_login()
     {
       axios
-      .post('https://0955-187-183-36-59.ngrok-free.app/login', {
+      .post('https://aac1-187-183-36-59.ngrok-free.app' + '/login', {
         email: email,
         password: password
       })

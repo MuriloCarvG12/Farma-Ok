@@ -7,6 +7,8 @@ import { Globalstyles } from './components/globalstyles';
 import Login from './screens/login'
 import Home from './screens/home'
 import Usuarios from './screens/usuarios'
+import Cadastro_usuarios from './screens/cadastro_usuario';
+import Listagem_produtos from './screens/listagem_produtos';
 
 const Stack = createStackNavigator();
 
@@ -17,10 +19,12 @@ export default function App() {
     <NavigationContainer >
       
       
-      <Stack.Navigator initialRouteName="Home">
+      <Stack.Navigator initialRouteName="Login">
         <Stack.Screen name="Login" component={Login} options={{headerShown: false}}/>
         <Stack.Screen name="Home" component={Home} options={{headerShown: false}}/>
         <Stack.Screen name="Usuarios" component={Usuarios} options={{headerShown: false}}/>
+        <Stack.Screen name="CadastrarUsuarios" component={Cadastro_usuarios} options={{headerShown: false}}/>
+        <Stack.Screen name="ListarProdutos" component={Listagem_produtos} options={{headerShown: false}}/>
         
       </Stack.Navigator>
       

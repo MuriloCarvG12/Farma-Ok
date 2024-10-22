@@ -190,11 +190,13 @@ export  const Globalstyles = StyleSheet.create({
     },
     Card_body:
     {
-      width: "70%",
-      height: "20%",
+      width: 300,
+      height: 150,
       alignItems: 'center',
       gap: 30,
       backgroundColor: 'white',
+      marginTop: 40,
+      
     },
     Card_view:
     {
