@@ -325,21 +325,37 @@ export  const Globalstyles = StyleSheet.create({
     borderTopEndRadius: 15,
     borderTopStartRadius: 15,
   },
+  Product_card_head_Title:
+  {
+    fontWeight: '600',
+    color: 'white',
+    fontSize: 20,
+  },
   Product_card_body: 
   {
     backgroundColor: 'white',
-    width: 250,
+    width: 300,
     height: 400,
     borderRadius: 20,
     borderWidth: 2,
     borderColor: '#43C59E',
     gap: 10,
+    marginBottom: 30,
   },
   Product_card_body_items:
   {
     paddingTop: 20,
     gap: 20,
     alignItems: 'center',
+  },
+  Product_card_body_items_row:
+  {
+    width: "100%",
+    flexDirection: 'row',
+  },
+  Product_card_body_items_text:
+  {
+    fontWeight: '600',
   },
 });
 
