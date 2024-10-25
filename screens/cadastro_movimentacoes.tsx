@@ -9,18 +9,33 @@ import { Picker } from '@react-native-picker/picker';
 
 const image = {uri: 'https://img.freepik.com/free-photo/wallpaper-background-several-transparent-circles_58702-7110.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1721952000&semt=ais_user'}
 
+type Pharm = {
+    id:	number
+    name: string
+    location: string
+}
+
+type product = {
+    product_id: number
+    branch_id:	number
+    branch_name: string
+    product_name: string
+    quantity: number
+}
+
 export default function Cadastro_movimentacoes({navigation}:any)
 {
-    const [filial_origem_options, set_filial_origem_options] = useState([])
-    const [filial_destino_options, set_filial_destino_options] = useState([])
-    const [produto_options, set_produto_options] = useState([])
-    const [produto_options_filtrados, set_produto_options_filtrados] = useState([])
+    const [filial_origem_options, set_filial_origem_options] = useState<Pharm[]>([])
+    const [filial_destino_options, set_filial_destino_options] = useState<Pharm[]>([])
+    const [produto_options, set_produto_options] = useState<product[]>([])
+    const [produto_options_filtrados, set_produto_options_filtrados] = useState<product[]>([])
+
     const [quantidade, set_quantidade] = useState('0')
 
 
-    const [filial_origem, set_filial_origem] = useState('')
-    const [filial_destino, set_filial_destino] = useState('')
-    const [produto, set_produto] = useState('')
+    const [filial_origem, set_filial_origem] = useState<Pharm[]>([])
+    const [filial_destino, set_filial_destino] = useState<Pharm[]>([])
+    const [produto, set_produto] = useState<product[]>([])
     
 
 
