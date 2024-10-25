@@ -37,7 +37,7 @@ export default function Login({navigation}:any) {
           }
         else if(response.data.profile === "filial")
         {
-          console.log('tela-filial')
+          navigation.navigate("ListarMovimentacoes")
         }
         else
         {

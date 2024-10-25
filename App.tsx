@@ -9,6 +9,8 @@ import Home from './screens/home'
 import Usuarios from './screens/usuarios'
 import Cadastro_usuarios from './screens/cadastro_usuario';
 import Listagem_produtos from './screens/listagem_produtos';
+import Lista_movimentacoes from './screens/listagem_movimentações';
+import Cadastro_movimentacoes from './screens/cadastro_movimentacoes';
 
 const Stack = createStackNavigator();
 
@@ -19,12 +21,14 @@ export default function App() {
     <NavigationContainer >
       
       
-      <Stack.Navigator initialRouteName="Login">
+      <Stack.Navigator initialRouteName="ListarMovimentacoes">
         <Stack.Screen name="Login" component={Login} options={{headerShown: false}}/>
         <Stack.Screen name="Home" component={Home} options={{headerShown: false}}/>
         <Stack.Screen name="Usuarios" component={Usuarios} options={{headerShown: false}}/>
         <Stack.Screen name="CadastrarUsuarios" component={Cadastro_usuarios} options={{headerShown: false}}/>
         <Stack.Screen name="ListarProdutos" component={Listagem_produtos} options={{headerShown: false}}/>
+        <Stack.Screen name="ListarMovimentacoes" component={Lista_movimentacoes} options={{headerShown: false}}/>
+        <Stack.Screen name="CadastroMovimentacoes" component={Cadastro_movimentacoes} options={{headerShown: false}}/>
         
       </Stack.Navigator>
       
