@@ -25,7 +25,7 @@ export default function Cadastro_movimentacoes({navigation}:any)
 
 
     useEffect(() => {
-        axios.get('https://e5da-187-183-36-59.ngrok-free.app' + '/branches/options' )
+        axios.get('https://3bed-187-183-36-59.ngrok-free.app' + '/branches/options' )
         .then((response) => {
             const data = response.data
             
@@ -40,7 +40,7 @@ export default function Cadastro_movimentacoes({navigation}:any)
     }, [])
 
     useEffect(() => {
-        axios.get('https://e5da-187-183-36-59.ngrok-free.app' + '/products/options' )
+        axios.get('https://3bed-187-183-36-59.ngrok-free.app' + '/products/options' )
         .then((response) => {
             const data = response.data
 
@@ -74,13 +74,15 @@ export default function Cadastro_movimentacoes({navigation}:any)
                 Alert.alert('A quantidade disponivel do produto é menor que a quantidade solicitada') 
             }
         
-       axios.post('https://e5da-187-183-36-59.ngrok-free.app' + '/movements',
+       axios.post('https://3bed-187-183-36-59.ngrok-free.app' + '/movements',
             {
                 "originBranchId": filial_origem.id,
                 "destinationBranchId": filial_destino.id,
                 "productId": produto.product_id,
                 "quantity": quantidade
             })
+
+        navigation.navigate("ListarMovimentacoes")
     }
 
     return(

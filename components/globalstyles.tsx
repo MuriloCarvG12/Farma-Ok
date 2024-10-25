@@ -337,7 +337,7 @@ export  const Globalstyles = StyleSheet.create({
   {
     backgroundColor: 'white',
     width: 300,
-    height: 400,
+    height: 420,
     borderRadius: 20,
     borderWidth: 2,
     borderColor: '#43C59E',
@@ -368,6 +368,7 @@ export  const Globalstyles = StyleSheet.create({
     backgroundColor: "#43C59E",
     alignItems: 'center',
     justifyContent: 'center',
+    marginBottom: 40,
   },
   form_movements:
   {
