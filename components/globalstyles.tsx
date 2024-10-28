@@ -359,6 +359,76 @@ export  const Globalstyles = StyleSheet.create({
   {
     fontWeight: '600',
   },
+
+  /*** Tela do Motorista */
+  
+  Card_Body_Motorista:
+  {
+    width: 300,
+    height: 700,
+    backgroundColor: 'rgba(204, 204, 204, 0.7)',
+    padding: 10,
+    borderRadius: 20,
+    borderWidth: 3,
+    borderColor: "#43C59E",
+    marginTop: 40,
+    
+  },
+  Card_Header_Motorista:
+  {
+    
+    flexDirection: 'row',
+    gap: 30,
+    marginBottom: 30,
+  },
+  Card_Progress_items:
+  {
+    marginBottom: 40,
+    height: "5%",
+    width: "100%",
+  
+  },
+  Card_Progress_Bar:
+  {
+    
+    height: "100%",
+    width: "50%",
+    backgroundColor: '#45d9ad'
+  },
+
+  Card_Item_Group_Motorista:
+  {
+    flexDirection: 'row'
+  },
+  Card_Body_Items_Motorista:
+  {
+    gap: 30,
+  },
+  Card_History_Motorista:
+  {
+    alignItems: 'center',
+    gap: 10,
+    marginBottom: 10,
+    marginTop: 10,
+  },
+  Card_Button_Group_Motorista:
+  {
+    
+    marginTop: 10,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+
+  Card_Button_Motorista:
+  {
+    height: 50,
+    width: 125,
+    backgroundColor: '#48BEFF',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  
 });
 
 
