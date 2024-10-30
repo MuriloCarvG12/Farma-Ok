@@ -372,7 +372,7 @@ export  const Globalstyles = StyleSheet.create({
     borderWidth: 3,
     borderColor: "#43C59E",
     marginTop: 40,
-    
+    position: 'relative',
   },
   Card_Header_Motorista:
   {
@@ -388,11 +388,15 @@ export  const Globalstyles = StyleSheet.create({
     width: "100%",
   
   },
+  Card_Progress_truck:
+  {
+    paddingLeft: 10,
+  },
   Card_Progress_Bar:
   {
     
     height: "100%",
-    width: 280,
+    width: 0,
     backgroundColor: '#45d9ad'
   },
 
@@ -413,10 +417,16 @@ export  const Globalstyles = StyleSheet.create({
   },
   Card_Button_Group_Motorista:
   {
-    
+    height: 100,
+    borderStyle: 'solid',
+    borderWidth: 2,
+    padding: 10,
+    borderColor: '#45d9ad',
     marginTop: 10,
     flexDirection: 'row',
     justifyContent: 'space-between',
+    alignItems: 'center',
+    
   },
 
   Card_Button_Motorista:
