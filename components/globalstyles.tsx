@@ -365,7 +365,7 @@ export  const Globalstyles = StyleSheet.create({
   Card_Body_Motorista:
   {
     width: 300,
-    height: 700,
+    height: 600,
     backgroundColor: 'rgba(204, 204, 204, 0.7)',
     padding: 10,
     borderRadius: 20,
@@ -392,7 +392,7 @@ export  const Globalstyles = StyleSheet.create({
   {
     
     height: "100%",
-    width: "50%",
+    width: 280,
     backgroundColor: '#45d9ad'
   },
 
@@ -427,6 +427,32 @@ export  const Globalstyles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  container_camera: {
+    flex: 1,
+    height: 300,
+    width: "100%",
+    justifyContent: 'center',
+    marginTop: 40,
+    borderStyle: 'solid',
+    borderWidth: 4,
+    borderColor: '#549c90'
+  },
+  camera: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    
+  },
+  camera_button:
+  {
+    marginTop: 150,
+    height: 60,
+    width: 130,
+    backgroundColor: '#43C59E',
+    borderRadius: 40,
+    justifyContent: 'center',
+  },
+
 
   
 });
