@@ -8,7 +8,7 @@ import {useFocusEffect} from '@react-navigation/native'
 
 import * as ImagePicker from 'expo-image-picker';
 
-export default function Card_motorista({Name, Quantity, Image, Start_Location, Destination_Location, Status, History, Id}:any)
+export default function Card_motorista({Name, Quantity, image, Start_Location, Destination_Location, Status, History, Id}:any)
 {
     
     /***Criação de variaveis que controlam estilizações no card com color (background color) height para a altura do card e progress_bar para determinar tamanho da barra de progresso */
@@ -74,7 +74,17 @@ export default function Card_motorista({Name, Quantity, Image, Start_Location, D
                 
                 <Text style={{width: "100%", textAlign: 'center', fontSize: 20, marginBottom: 30}}> {Name} </Text>
                 </View>
-
+                <Image
+                style={{
+                    marginBottom: 20,
+                    width: 75,
+                    height: 75,
+                    alignSelf: 'center',
+                }}
+                source={{
+                    uri: image,
+                  }}
+                />
                 <View style={Globalstyles.Card_Item_Group_Motorista}>
                     <Text style={{fontWeight: 'bold'}}>Quantidade do Produto</Text>
                     <Text> {Quantity} </Text>

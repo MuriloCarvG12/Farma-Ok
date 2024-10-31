@@ -25,7 +25,7 @@ export default function App() {
       
       
 
-      <Stack.Navigator initialRouteName="ListarMovimentacoes">
+      <Stack.Navigator initialRouteName="Login">
         <Stack.Screen name="Login" component={Login} options={{headerShown: false}}/>
         <Stack.Screen name="Home" component={Home} options={{headerShown: false}}/>
         <Stack.Screen name="Usuarios" component={Usuarios} options={{headerShown: false}}/>

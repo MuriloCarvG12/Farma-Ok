@@ -26,22 +26,22 @@ export default function Login({navigation}:any) {
     function handle_login()
     {
       axios
-      .post('https://aac1-187-183-36-59.ngrok-free.app' + '/login', {
+      .post('https://16d9-187-183-36-59.ngrok-free.app' + '/login', {
         email: email,
         password: password
       })
       .then((response) => {
         if(response.data.profile === "admin")
           {
-             navigation.navigate("Home")
+             navigation.navigate("Home", {user_name: response.data.name})
           }
         else if(response.data.profile === "filial")
         {
-          navigation.navigate("ListarMovimentacoes")
+          navigation.navigate("ListarMovimentacoes", {user_name: response.data.name})
         }
-        else
+        else if(response.data.profile === "motorista")
         {
-          console.log('tela-motorista')
+          navigation.navigate("TelaMotorista", {user_name: response.data.name})
         }
 
     })

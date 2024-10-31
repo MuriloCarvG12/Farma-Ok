@@ -40,7 +40,7 @@ export default function Cadastro_usuarios()
 
         else if( profile && name && document && address && email && password && checkpassword !== '')
             { 
-                 axios.post(process.env.EXPO_PUBLIC_API_URL + '/register', {
+                 axios.post('https://16d9-187-183-36-59.ngrok-free.app' + '/register', {
                     profile: profile,
                     name: name,
                     document: document,
@@ -69,7 +69,9 @@ export default function Cadastro_usuarios()
     }
 
     return(
-        <View style={Globalstyles.container}>
+        /***background com cor estática devido ao image background por algum motivo, quebrar o picker... */
+        <View style={[Globalstyles.container, {backgroundColor: 'rgba(67, 197, 158, 0.5)'}]}>
+            
         <Picker
         style={Globalstyles.user_register_type}
         selectedValue={Profile}

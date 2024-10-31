@@ -17,7 +17,7 @@ export default function Listagem_produtos({navigation}:any)
     useEffect(
         () => 
             {
-                axios.get('https://2fe9-187-183-36-59.ngrok-free.app' + '/products')
+                axios.get('https://16d9-187-183-36-59.ngrok-free.app' + '/products')
                 .then((response) => 
                     {
                         const data = response.data
@@ -37,7 +37,7 @@ export default function Listagem_produtos({navigation}:any)
             <ImageBackground source={image} resizeMode="cover" style={Globalstyles.image}>
                 <View style={Globalstyles.list_products_body}>
                     <View style={Globalstyles.list_products_header}>
-                        <Text style={{fontSize: 20, color: 'white', fontWeight: '600'}}>Eu sou a Tela Listagem</Text>
+                        <Text style={{fontSize: 20, color: 'white', fontWeight: '600'}}>Listagem de Produtos</Text>
                     </View>
 
                     <FlatList

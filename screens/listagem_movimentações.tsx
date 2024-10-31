@@ -32,7 +32,7 @@ export default function Lista_movimentacoes({navigation}:any)
 
     function handle_movement()
     {
-        axios.get('https://3bed-187-183-36-59.ngrok-free.app' + '/movements')
+        axios.get('https://16d9-187-183-36-59.ngrok-free.app' + '/movements')
         .then((response) => 
            {
                const data = response.data
@@ -72,7 +72,7 @@ export default function Lista_movimentacoes({navigation}:any)
                     />
                 
                 <TouchableOpacity style={Globalstyles.users_button} onPress={() => navigation.navigate("CadastroMovimentacoes")}>
-                        <Text style={Globalstyles.home_link}>Cadastrar Usuário</Text>
+                        <Text style={Globalstyles.home_link}>Cadastrar Movimento</Text>
                 </TouchableOpacity>
             </ImageBackground>
         </View>

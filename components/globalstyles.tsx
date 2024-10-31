@@ -39,7 +39,9 @@ export  const Globalstyles = StyleSheet.create({
       flexDirection:'row',
       alignItems:'center',
       alignSelf: 'center',
-      backgroundColor: 'white',
+      backgroundColor: 'rgba(254, 254, 255, 0.2)',
+      borderStyle: 'solid',
+      borderWidth: 2,
       width: "100%",
       height: "20%",
       padding: 10,
@@ -118,13 +120,13 @@ export  const Globalstyles = StyleSheet.create({
     /**Tela Home */
     home_header:
     {
-      width: "90%",
+      width: "95%",
       height: "10%",
       backgroundColor: '#43C59E',
       justifyContent: 'center',
       alignItems: 'center',
       flexDirection: 'row',
-      gap: 30,
+      gap: 10,
     },
     headerPFP: {
       width: 50,
@@ -229,6 +231,7 @@ export  const Globalstyles = StyleSheet.create({
       justifyContent: 'center',
       backgroundColor: '#e0f1ff',
       marginBottom: 40,
+      marginTop: 20,
     },
     /***Tela Cadastro Usuários */
     user_register_page:
@@ -364,7 +367,7 @@ export  const Globalstyles = StyleSheet.create({
   Card_Body_Motorista:
   {
     width: 300,
-    height: 600,
+    height: 625,
     backgroundColor: 'rgba(204, 204, 204, 0.7)',
     padding: 10,
     borderRadius: 20,
@@ -463,8 +466,7 @@ export  const Globalstyles = StyleSheet.create({
   },
 
 
-  
-=======
+
   /*** */
   list_moviments_header:
   {

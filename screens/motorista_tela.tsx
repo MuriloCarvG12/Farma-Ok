@@ -1,5 +1,5 @@
 import { StatusBar} from 'expo-status-bar';
-import { ImageBackground, Text, View, TextInput, TouchableOpacity, Alert, FlatList, ScrollView  } from 'react-native';
+import { ImageBackground, Text, View, TouchableOpacity, Alert, FlatList, Image  } from 'react-native';
 import { Globalstyles } from '../components/globalstyles';
 import Card_motorista from '../components/card/Card_motorista';
 import { useEffect, useState } from 'react';
@@ -9,12 +9,32 @@ import * as ImagePicker from 'expo-image-picker';
 
 const image = {uri: 'https://img.freepik.com/free-photo/wallpaper-background-several-transparent-circles_58702-7110.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1721952000&semt=ais_user'}
 
-export default function Tela_motorista({navigation}:any)
+export default function Tela_motorista({navigation, route}:any)
 {
+
+   const {user_name} = route.params
     const [list_products, set_list_products] = useState([])
+
+    function load_page()
+  {
+    axios.get('https://16d9-187-183-36-59.ngrok-free.app' + '/movements')
+
+        .then((response) => 
+            {
+                const data = response.data
+                set_list_products(data)
+                                           
+            } 
+            )
+    .catch((error) =>
+        {
+            Alert.alert('Houve um erro ao buscar os Produtos')
+        })  
+  }
 
     useEffect(() => {
         load_page()
+        
     }, 
 [])
 
@@ -41,15 +61,16 @@ async function getImageCamera(ID:any) {
           name: imageInCamera.assets[0].fileName
         })
 
-        body.append("motorista", "Joaozim")
+        body.append("motorista", user_name)
 
-        axios.put('https://2da9-187-183-36-59.ngrok-free.app' + '/movements/' + ID + '/start', body, {
+        axios.put('https://16d9-187-183-36-59.ngrok-free.app' + '/movements/' + ID + '/start', body, {
           headers: {
             "Content-Type": 'multipart/form-data'
           }
         })
         // inicia a função para buscar e atualizar o list_products
         load_page()
+        
         
       }
     }
@@ -78,9 +99,9 @@ async function getImageCamera(ID:any) {
           name: imageInCamera.assets[0].fileName
         })
 
-        body.append("motorista", "Joaozim")
+        body.append("motorista", user_name)
 
-        axios.put('https://2da9-187-183-36-59.ngrok-free.app' + '/movements/' + ID + '/end', body, {
+        axios.put('https://16d9-187-183-36-59.ngrok-free.app' + '/movements/' + ID + '/end', body, {
           headers: {
             "Content-Type": 'multipart/form-data'
           }
@@ -92,24 +113,7 @@ async function getImageCamera(ID:any) {
     }
   }
     
-  function load_page()
-  {
-    axios.get('https://2da9-187-183-36-59.ngrok-free.app' + '/movements')
-
-        .then((response) => 
-            {
-                const data = response.data
-                set_list_products(data)
-                                           
-            } 
-            )
-    .catch((error) =>
-        {
-            Alert.alert('Houve um erro ao buscar os Produtos')
-        })
-    
-    
-  }
+  
   
     
 
@@ -117,11 +121,18 @@ async function getImageCamera(ID:any) {
         <View style={Globalstyles.container}>
             <ImageBackground source={image} resizeMode="cover" style={Globalstyles.image}>
             <View style={Globalstyles.list_products_body}>
-            <View style={Globalstyles.home_header}>
-                <Ionicons name="person" size={32} color="#14453D" />
-                <Text style={Globalstyles.home_header_text}>Bem Vindo</Text>
-                <Text style={Globalstyles.home_header_text}>Motorista</Text>
-            </View>
+            
+          
+                <View style={Globalstyles.home_header}>
+                <Image
+                style={Globalstyles.headerPFP}
+                source={{
+                    uri: 'https://cdn.pixabay.com/photo/2012/04/18/00/07/silhouette-of-a-man-36181_640.png',
+                  }}
+                />
+                    <Text style={Globalstyles.home_header_text}>Bem Vindo</Text>
+                    <Text style={Globalstyles.home_header_text}> {user_name} </Text>
+                </View>
            
             <FlatList 
             data={list_products}
@@ -129,7 +140,7 @@ async function getImageCamera(ID:any) {
             return(
             <>
             <Card_motorista
-         
+            image = {item.produto.imagem}
             Name = {item.produto.nome}
             Quantity = {item.quantidade} 
             Start_Location = {item.origem.nome}
