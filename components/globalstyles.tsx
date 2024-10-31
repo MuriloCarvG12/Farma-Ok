@@ -337,7 +337,7 @@ export  const Globalstyles = StyleSheet.create({
   {
     backgroundColor: 'white',
     width: 300,
-    height: 400,
+    height: 420,
     borderRadius: 20,
     borderWidth: 2,
     borderColor: '#43C59E',
@@ -359,8 +359,7 @@ export  const Globalstyles = StyleSheet.create({
   {
     fontWeight: '600',
   },
-
-  /*** Tela do Motorista */
+/*** Tela do Motorista */
   
   Card_Body_Motorista:
   {
@@ -465,6 +464,63 @@ export  const Globalstyles = StyleSheet.create({
 
 
   
+=======
+  /*** */
+  list_moviments_header:
+  {
+    width: "100%",
+    height: "10%",
+    backgroundColor: "#43C59E",
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: 40,
+  },
+  form_movements:
+  {
+    width: "80%",
+    height: "70%",
+    backgroundColor: 'rgba(254, 254, 255, 0.2)',
+    borderStyle: 'solid',
+    borderColor: 'grey',
+    borderWidth: 1,
+    borderRadius: 40,
+    padding: 10,
+  },
+  list_moviments_header_text:
+  {
+    fontWeight: '600',
+    color: 'white',
+    fontSize: 20,
+  },
+  movement_register_item:
+  {
+    flexDirection: 'column',
+    gap: 20,
+    marginBottom: 15,
+  },
+  movements_register_input_title:
+  {
+    textAlign: 'center',
+    fontWeight: '600',
+    fontSize: 18,
+  },
+  movements_button:
+  {
+    width: 225,
+    height: 60,
+    borderRadius: 50,
+    justifyContent: 'center',
+    backgroundColor: '#91cdff',
+    marginBottom: 40,
+  },
+  movements_button_text:
+  {
+    textAlign: 'center',
+    fontSize: 22,
+    fontWeight: '600',
+    color: 'white'
+  },
+
 });
 
 
