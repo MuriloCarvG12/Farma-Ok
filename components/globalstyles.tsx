@@ -359,7 +359,112 @@ export  const Globalstyles = StyleSheet.create({
   {
     fontWeight: '600',
   },
+/*** Tela do Motorista */
+  
+  Card_Body_Motorista:
+  {
+    width: 300,
+    height: 600,
+    backgroundColor: 'rgba(204, 204, 204, 0.7)',
+    padding: 10,
+    borderRadius: 20,
+    borderWidth: 3,
+    borderColor: "#43C59E",
+    marginTop: 40,
+    position: 'relative',
+  },
+  Card_Header_Motorista:
+  {
+    
+    flexDirection: 'row',
+    gap: 30,
+    marginBottom: 30,
+  },
+  Card_Progress_items:
+  {
+    marginBottom: 40,
+    height: "5%",
+    width: "100%",
+  
+  },
+  Card_Progress_truck:
+  {
+    paddingLeft: 10,
+  },
+  Card_Progress_Bar:
+  {
+    
+    height: "100%",
+    width: 0,
+    backgroundColor: '#45d9ad'
+  },
 
+  Card_Item_Group_Motorista:
+  {
+    flexDirection: 'row'
+  },
+  Card_Body_Items_Motorista:
+  {
+    gap: 30,
+  },
+  Card_History_Motorista:
+  {
+    alignItems: 'center',
+    gap: 10,
+    marginBottom: 10,
+    marginTop: 10,
+  },
+  Card_Button_Group_Motorista:
+  {
+    height: 100,
+    borderStyle: 'solid',
+    borderWidth: 2,
+    padding: 10,
+    borderColor: '#45d9ad',
+    marginTop: 10,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    
+  },
+
+  Card_Button_Motorista:
+  {
+    height: 50,
+    width: 125,
+    backgroundColor: '#48BEFF',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  container_camera: {
+    flex: 1,
+    height: 300,
+    width: "100%",
+    justifyContent: 'center',
+    marginTop: 40,
+    borderStyle: 'solid',
+    borderWidth: 4,
+    borderColor: '#549c90'
+  },
+  camera: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    
+  },
+  camera_button:
+  {
+    marginTop: 150,
+    height: 60,
+    width: 130,
+    backgroundColor: '#43C59E',
+    borderRadius: 40,
+    justifyContent: 'center',
+  },
+
+
+  
+=======
   /*** */
   list_moviments_header:
   {
@@ -415,6 +520,7 @@ export  const Globalstyles = StyleSheet.create({
     fontWeight: '600',
     color: 'white'
   },
+
 });
 
 
