@@ -1,4 +1,6 @@
-#Readme
+#Readme 
+
+        DISPONIBILIZADO UM PDF APRESENTANDO O APP NA MAIN BRANCH
 
         Introdução sobre o projeto
 
